@@ -34,6 +34,12 @@ void makeChildren( Node *parent ) {
 
   return;
 }
+void removeChildren( Node *parent ){
+    for(int i=0;i<4;i++){
+        free(parent->child[i]);
+        parent->child[i]=NULL;
+    }
+}
 void growTree( Node *parent ){
     if(parent->child[2]==NULL){
         makeChildren(parent);
