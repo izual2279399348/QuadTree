@@ -14,7 +14,16 @@ void writeTree( Node *head ) {
   return;
 }
 void destroyTree( Node *the_node ){
-    if(the_node->child[0]!=)
+    if(the_node->child[0]==NULL){
+        free(the_node);
+    }
+    else{
+        for(int i=0;i<4;i++){
+            destroyTree(the_node->child[i]);
+        }
+        free(the_node);
+    }
+    return;
 }
 // recursively visit the leaf nodes
 
