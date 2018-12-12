@@ -34,3 +34,14 @@ void makeChildren( Node *parent ) {
 
   return;
 }
+void growTree( Node *parent ){
+    if(parent->child[2]==NULL){
+        makeChildren(parent);
+    }
+    else{
+        for(int i=0;i<4;i++){
+            growTree(parent->child[i]);
+        }
+    }
+    return;
+}

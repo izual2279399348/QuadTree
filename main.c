@@ -1,8 +1,8 @@
 #include "stdlib.h"
 #include "math.h"
 #include "stdio.h"
-#include "writeTree.h"
-#include "buildTree.h"
+#include "writeTree.c"
+#include "buildTree.c"
 #include "treeStructure.h"
 int main( int argc, char **argv ) {
 
@@ -14,7 +14,8 @@ int main( int argc, char **argv ) {
   // make a tree
   makeChildren( head );
   makeChildren( head->child[1] );
-
+  //growTree(head);
+  growTree(head);
   // print the tree for Gnuplot
 	writeTree( head );
 

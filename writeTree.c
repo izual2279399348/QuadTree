@@ -13,7 +13,9 @@ void writeTree( Node *head ) {
 
   return;
 }
-
+void destroyTree( Node *the_node ){
+    if(the_node->child[0]!=)
+}
 // recursively visit the leaf nodes
 
 void writeNode( FILE *fp, Node *node ) {
